@@ -20,7 +20,7 @@ export const Category = () => {
   const subCategories =
     categories &&
     categories.subcategories.find((item) => item.title === newSubId);
-  console.log(subCategories);
+
   return (
     <div className="category">
       <div className="category__header">

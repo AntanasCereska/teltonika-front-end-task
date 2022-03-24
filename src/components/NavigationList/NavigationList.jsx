@@ -31,8 +31,7 @@ export const NavigationList = ({ data, func }) => {
   };
 
   if (!data || data.length === 0) return null;
-  /*   console.log(data);
-   */ return (
+  return (
     <div className="expandable-list">
       <div className="expandable-list__list-wrapper">
         <span className="expandable-list__item">
