@@ -20,7 +20,7 @@ export const Category = () => {
   const subCategories =
     categories &&
     categories.subcategories.find((item) => item.title === newSubId);
-
+  console.log(subCategories);
   return (
     <div className="category">
       <div className="category__header">
@@ -36,9 +36,10 @@ export const Category = () => {
         />
       </div>
       <div className="category__data">
-        {!subCategories?.subsubcategories && (
-          <ErrorMessage text="No sub-sub-categories" size="medium" />
-        )}
+        {!subCategories?.subsubcategories ||
+          (subCategories?.subsubcategories.length === 0 && (
+            <ErrorMessage text="No sub-sub-categories" size="medium" />
+          ))}
         {subCategories?.subsubcategories
           ?.filter((subsubcategory) => {
             if (input === "") {
@@ -50,7 +51,7 @@ export const Category = () => {
             }
           })
           .map((subsubcategory) => (
-            <div className="category__data-item" key={subsubcategory}>
+            <div className="category__data-item" key={subsubcategory.title}>
               <Table data={subsubcategory} />
             </div>
           ))}

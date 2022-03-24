@@ -19,7 +19,7 @@ export const NewUser = () => {
     first_name: "",
     last_name: "",
     gender: "",
-    age: null,
+    age: "",
     email: "",
     category_title: "",
     subcategory_title: "",
@@ -276,7 +276,7 @@ export const NewUser = () => {
         </div>
         <div className="new-user__div12">
           <Button
-            text="Create sub-category"
+            text="Add user"
             type="submit"
             form="new-user-form"
             value="Submit"

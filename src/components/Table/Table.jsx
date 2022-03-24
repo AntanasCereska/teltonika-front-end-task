@@ -30,15 +30,20 @@ export const Table = ({ data, headers = tableHeaders }) => {
       <caption className="table__caption">{title}</caption>
       <thead>
         <tr className="table__row">
-          {headers && headers.map((header) => <td key={header}>{header}</td>)}
+          {headers &&
+            headers.map((header) => (
+              <th className="table__headers" key={header}>
+                {header}
+              </th>
+            ))}
         </tr>
       </thead>
       <tbody>
         {users &&
           users.map((user) => (
-            <tr className="table__row">
-              {Object.keys(user).map((key) => (
-                <td key={user + key}>{user[key]}</td>
+            <tr className="table__row" key={user.first_name + user.last_name}>
+              {Object.keys(user).map((key, i) => (
+                <td key={user[key]}>{user[key]}</td>
               ))}
             </tr>
           ))}
