@@ -1,5 +1,24 @@
 # Node.js v16.14.1
 
+### Existing Features
+- Add category (does not let to create with existing title, input validation)
+- Add sub-category (does not let to create with existing title within the same category, input validation)
+- Add sub-sub-category (does not let to create with existing title below the same sub-category, input validation)
+- Add user to subcategory (input validation)
+- Filter sub-sub-categories in 'categories' (subcategories) page
+- Export data in JSON format (options: all data, single category data)
+
+### Issues found (Bugs) / Possible improvements
+- Add category (does not let to create with existing title, input validation)
+- Second level routing (e.g baseUrl/categories/**Admins**) does not show 'Not found' page if there is a mistake (e.g. Url/categories/**Admisn**)
+- Improve scss and variable namings
+
+### Features to introduce
+- Add dark theme (switch between light/dark)
+- Do not let add user with same data (first name, last name, email)
+- Addings birth year instead of age would make more sense
+- Table sorting by column labels
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
