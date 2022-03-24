@@ -33,7 +33,8 @@ const App = () => {
           </div>
           <div className="App__content">
             <Routes>
-              <Route index element={<NewUser />} />
+              <Route index element={<NewUser />} />{" "}
+              <Route path="/settings" element={<Settings />} />
               <Route path="/new-user" element={<NewUser />} />
               <Route path="/create-category" element={<CreateCategory />} />
               <Route
@@ -45,7 +46,6 @@ const App = () => {
                 element={<CreateSubSubCategory />}
               />
               <Route path="categories/:id/:subId" element={<Category />} />
-              <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<NotFound404 />} />
             </Routes>
           </div>

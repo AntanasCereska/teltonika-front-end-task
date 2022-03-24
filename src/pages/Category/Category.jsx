@@ -20,6 +20,7 @@ export const Category = () => {
   const subCategories =
     categories &&
     categories.subcategories.find((item) => item.title === newSubId);
+
   return (
     <div className="category">
       <div className="category__header">
@@ -35,7 +36,7 @@ export const Category = () => {
         />
       </div>
       <div className="category__data">
-        {!subCategories.subsubcategories && (
+        {!subCategories?.subsubcategories && (
           <ErrorMessage text="No sub-sub-categories" size="medium" />
         )}
         {subCategories?.subsubcategories
@@ -43,7 +44,7 @@ export const Category = () => {
             if (input === "") {
               return subsubcategory;
             } else if (
-              subsubcategory.title.toLowerCase().includes(input.toLowerCase())
+              subsubcategory?.title.toLowerCase().includes(input.toLowerCase())
             ) {
               return subsubcategory;
             }
