@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationDesktop } from "./components/NavigationDesktop/NavigationDesktop";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
@@ -33,7 +33,7 @@ const App = () => {
           </div>
           <div className="App__content">
             <Routes>
-              <Route index element={<NewUser />} />{" "}
+              <Route path="/" element={<Navigate to="new-user" />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/new-user" element={<NewUser />} />
               <Route path="/create-category" element={<CreateCategory />} />
