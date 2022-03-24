@@ -15,6 +15,7 @@
 
 ### Features to introduce
 - Add dark theme (switch between light/dark)
+- Settings (edit min and max age for user input, password policy, data visibility)
 - Do not let add user with same data (first name, last name, email)
 - Addings birth year instead of age would make more sense
 - Table sorting by column labels
