@@ -1,4 +1,8 @@
-# Node.js v16.14.1
+# Teltonika Front-End task
+
+This app is still being developed, so please pull newest updates :) 
+
+### Node.js v16.14.1
 
 ### Existing Features
 - Add category (does not let to create with existing title, input validation)
@@ -7,16 +11,18 @@
 - Add user to subcategory (input validation)
 - Filter sub-sub-categories in 'categories' (subcategories) page
 - Export data in JSON format (options: all data, single category data)
+- All data gets save to local storage (dummy data exists by default)
 
 ### Issues found (Bugs) / Possible improvements
 - Second level routing (e.g baseUrl/categories/**Admins**) does not show 'Not found' page if there is a mistake (e.g. Url/categories/**Admisn**)
 - Improve scss and variable namings
+- JSON structure should have title 'categories' for categories data.
 
 ### Features to introduce
 - Add dark theme (switch between light/dark)
 - Settings (edit min and max age for user input, password policy, data visibility)
 - Do not let add user with same data (first name, last name, email)
-- Addings birth year instead of age would make more sense
+- Adding birth year instead of age would make more sense
 - Table sorting by column labels
 
 # Getting Started with Create React App
