@@ -1,0 +1,22 @@
+@import "../../scss/base/mixins";
+@import "../../scss/base/variables";
+
+.create-sub-sub-category {
+    @include page-layout;
+
+    &__form {
+        box-shadow: $box-shadow-button;
+        background-color: $form-background;
+        padding: 48px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    @media (max-width: 1400px) {
+        padding: 36px 24px;
+    }
+}

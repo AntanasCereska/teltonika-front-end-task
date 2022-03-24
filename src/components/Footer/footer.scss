@@ -1,0 +1,12 @@
+@import "../../scss/base/variables";
+
+.footer {
+    height: 80px;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: $box-shadow-layout;
+
+    @media (max-width: 1400px) {
+        height: 60px;
+    }
+}

@@ -1,0 +1,22 @@
+.error-message {
+    color: red;
+    font-size: 14px;
+    padding: 4px 8px;
+    display: block;
+
+    &--small {
+        font-size: 14px;
+    }
+
+    &--medium {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 0;
+    }
+
+    &--large {
+        padding: 12px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

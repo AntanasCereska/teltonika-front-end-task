@@ -1,0 +1,39 @@
+@import "../../scss/base/variables";
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    position: relative;
+
+    &__label-icon-wrapper {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+
+    &__input {
+        box-shadow: $box-shadow-picklist;
+        width: 100%;
+
+        border-radius: 4px;
+        border: none;
+        padding: 8px 12px;
+
+        &:focus {
+            outline: 1px solid $color-primary;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 8px;
+    }
+}

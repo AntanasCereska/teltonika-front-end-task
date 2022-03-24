@@ -1,0 +1,39 @@
+@import "../../scss/base/mixins";
+@import "../../scss/base/variables";
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: $color-white;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: $box-shadow-layout;
+    z-index: 100;
+
+    @include media-query-tablet-and-down {
+        height: 60px;
+    }
+
+    &__brand {
+        font-weight: 600;
+        font-size: 20px;
+
+        @include media-query-phone {
+            font-size: 16px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__button-menu {
+        display: none;
+        @include media-query-tablet-and-down {
+            display: block;
+        }
+    }
+}

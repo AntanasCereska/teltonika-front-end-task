@@ -1,0 +1,42 @@
+@import "../../scss/base/mixins";
+
+.not-found-404 {
+    @include page-layout;
+
+    &__image {
+        margin-top: 40px;
+        width: 280px;
+        border-radius: 60px;
+
+        @include media-query-tablet-and-down {
+            width: 150px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 300px;
+        font-weight: 600;
+        position: absolute;
+
+        @include media-query-tablet-and-down {
+            font-size: 180px;
+        }
+        @include media-query-phone {
+            font-size: 48px;
+        }
+    }
+    &__text-o {
+        font-size: 500px;
+        font-weight: 400;
+
+        @include media-query-tablet-and-down {
+            font-size: 300px;
+        }
+        @include media-query-phone {
+            font-size: 260px;
+        }
+    }
+}

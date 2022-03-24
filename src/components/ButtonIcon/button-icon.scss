@@ -1,0 +1,32 @@
+@import "../../scss/base/variables";
+
+.button-icon {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 0;
+    height: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+
+    &--background-color {
+        background-color: $color-accent-2;
+    }
+
+    &__icon {
+        &--large {
+            width: 32px;
+            height: 32px;
+        }
+
+        &--medium {
+            width: 24px;
+            height: 24px;
+        }
+
+        &--small {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

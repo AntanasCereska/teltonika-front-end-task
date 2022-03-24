@@ -1,0 +1,36 @@
+//media query mixins
+@mixin media-query-phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-query-tablet {
+    @media (min-width: 768px) and (max-width: 1399px) {
+        @content;
+    }
+}
+
+@mixin media-query-tablet-and-down {
+    @media (max-width: 1399px) {
+        @content;
+    }
+}
+
+@mixin media-query-desktop {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+//other mixinx
+@mixin page-layout {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+}

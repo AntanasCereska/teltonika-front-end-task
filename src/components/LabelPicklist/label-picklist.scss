@@ -1,0 +1,30 @@
+@import "../../scss/base/variables";
+
+.label-picklist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+
+    &__label {
+        font-weight: 500;
+    }
+
+    &__select {
+        box-shadow: $box-shadow-picklist;
+        border-radius: 4px;
+        border: none;
+        padding: 8px 12px;
+        border-right: 16px solid transparent;
+        background-color: $color-white;
+
+        &:focus {
+            outline: 1px solid $color-primary;
+        }
+    }
+    &__option {
+        border-radius: 4px;
+        border: 1px solid $color-black;
+        padding: 4px 8px;
+    }
+}
