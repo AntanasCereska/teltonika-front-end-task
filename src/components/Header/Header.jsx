@@ -20,12 +20,12 @@ export const Header = () => {
       />
       <div className="header__buttons">
         <Link to="/settings">
-          <ButtonIcon iconType="settings" iconSize="medium" />
+          <ButtonIcon iconType="settings" iconSize="large" />
         </Link>
         <div className="header__button-menu">
           <ButtonIcon
             iconType="menu"
-            iconSize="medium"
+            iconSize="large"
             func={handleNavigationMobile}
           />
         </div>

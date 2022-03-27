@@ -10,18 +10,15 @@ export const Labelnput = ({
   min,
   max,
   name,
+  disabled,
   func,
 }) => {
-  const htmlFor = label.toLowerCase().replaceAll(" ", "-");
-
   const [showPassword, setShowPassword] = useState(type);
 
+  const htmlFor = label.toLowerCase().replaceAll(" ", "-");
+
   const handleShowPassword = () => {
-    if (showPassword === "password") {
-      setShowPassword("text");
-    } else {
-      setShowPassword("password");
-    }
+    setShowPassword((showPassword === "password" && "text") || "password");
   };
 
   return (
@@ -31,6 +28,7 @@ export const Labelnput = ({
       </label>
       <span className="label-input__label-icon-wrapper">
         <input
+          disabled={disabled}
           type={showPassword}
           id={htmlFor}
           placeholder={placeholder}
@@ -45,7 +43,7 @@ export const Labelnput = ({
           <i className="label-input__icon">
             <ButtonIcon
               iconType={showPassword === "password" ? "eye" : "eye-off"}
-              iconSize="small"
+              iconSize="medium"
               func={handleShowPassword}
             />
           </i>

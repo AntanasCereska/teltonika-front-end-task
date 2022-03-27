@@ -55,12 +55,12 @@ export const CreateSubCategory = () => {
   };
 
   useEffect(() => {
-    setFormValues({
+    setFormValues((f) => ({
       ...formValues,
       category_index: categories.findIndex(
         (x) => x.title === formValues?.category_title
       ),
-    });
+    }));
   }, [formValues.category_title]);
 
   useEffect(() => {
@@ -86,7 +86,8 @@ export const CreateSubCategory = () => {
         id="create-sub-category"
         onSubmit={handleSubmit}
       >
-        <h1>Create Sub-Category</h1>
+        <h1 className="create-sub-category__title">Create Sub-Category</h1>
+        {JSON.stringify(formValues)}
         <div>
           <LabelPicklist
             label="Select Category"

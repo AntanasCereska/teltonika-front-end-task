@@ -6,8 +6,8 @@ import { NavigationList } from "../NavigationList/NavigationList";
 import { Button } from "../Button/Button";
 import { exportDataToJsonFile } from "../../utils/exportDataToJson";
 
-//!move 'navigationLinks' to NavgationList.jsx
-const navigationLinks = [
+//!move 'actionLinks' to NavgationList.jsx
+const actionLinks = [
   {
     title: "New user",
     url: "/new-user",
@@ -27,26 +27,26 @@ const navigationLinks = [
 ];
 
 export const NavigationDesktop = () => {
-  const navigationCategories = useSelector((state) => state.categories);
+  const navigationdata = useSelector((state) => state.categories);
 
   return (
     <aside className="navigation-desktop">
       <nav className="navigation-desktop__wrapper">
-        {navigationLinks.map((navigationLink) => (
+        {actionLinks.map((actionLink) => (
           <NavLink
-            key={navigationLink.title}
-            to={navigationLink.url}
+            key={actionLink.title}
+            to={actionLink.url}
             className="navigation-desktop__list-item"
           >
-            {navigationLink.title}
+            {actionLink.title}
           </NavLink>
         ))}
-        {navigationCategories.map((item) => (
+        {navigationdata.map((item) => (
           <NavigationList data={item} key={item.title} />
         ))}
       </nav>
       <Button
-        func={() => exportDataToJsonFile(navigationCategories, "All")}
+        func={() => exportDataToJsonFile(navigationdata, "All")}
         text="Export all data"
       />
     </aside>

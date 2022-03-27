@@ -5,19 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 24px;
     text-align: left;
-
-    &__header {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 32px;
-        background-color: $color-accent-3;
-        border-radius: 16px;
-        padding: 16px;
-    }
 
     &__category-title {
         align-self: flex-start;
@@ -25,10 +15,10 @@
 
     &__subcategory-title {
         align-self: flex-start;
+        margin-bottom: 24px;
     }
 
     &__data {
-        margin-top: 64px;
         display: flex;
         flex-direction: column;
         gap: 48px;
@@ -41,11 +31,5 @@
         width: 100%;
         overflow-x: auto;
         overflow-y: auto;
-    }
-
-    &__aaa {
-        height: 50px;
-        overflow-y: auto;
-        width: 1000px;
     }
 }

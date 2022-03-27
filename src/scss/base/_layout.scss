@@ -23,6 +23,12 @@ html *,
 
     &__header {
         z-index: 10;
+
+        @include media-query-phone {
+            display: flex;
+            position: sticky;
+            top: 0;
+        }
     }
 
     &__base {
@@ -55,7 +61,7 @@ html *,
             padding: 36px;
         }
         @include media-query-phone {
-            padding: 24px;
+            padding: 20px;
         }
     }
 

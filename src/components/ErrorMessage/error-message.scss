@@ -1,5 +1,7 @@
+@import "../../scss/base/variables";
+
 .error-message {
-    color: red;
+    color: $color-error;
     font-size: 14px;
     padding: 4px 8px;
     display: block;

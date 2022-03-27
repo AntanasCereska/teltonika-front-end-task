@@ -4,6 +4,10 @@
 .create-sub-sub-category {
     @include page-layout;
 
+    &__title {
+        text-align: left;
+    }
+
     &__form {
         box-shadow: $box-shadow-button;
         background-color: $form-background;
@@ -14,6 +18,10 @@
         gap: 24px;
         width: 100%;
         max-width: 800px;
+
+        @include media-query-tablet-and-down {
+            padding: 36px 24px;
+        }
     }
 
     @media (max-width: 1400px) {

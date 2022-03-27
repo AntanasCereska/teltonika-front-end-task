@@ -21,11 +21,7 @@ export const LabelPicklist = ({ label, options, name, value, func }) => {
           -- select {name.replaceAll("_", " ")} --
         </option>
         {options?.map((option) => (
-          <option
-            className="label-picklist__option"
-            value={option?.title || option}
-            key={option?.title || option}
-          >
+          <option value={option?.title || option} key={option?.title || option}>
             {option.title || option}
           </option>
         ))}

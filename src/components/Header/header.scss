@@ -2,7 +2,7 @@
 @import "../../scss/base/variables";
 
 .header {
-    height: 80px;
+    height: 64px;
     width: 100%;
     background-color: $color-white;
     padding: 0 32px;
@@ -12,8 +12,8 @@
     box-shadow: $box-shadow-layout;
     z-index: 100;
 
-    @include media-query-tablet-and-down {
-        height: 60px;
+    @include media-query-phone {
+        padding: 0 20px;
     }
 
     &__brand {
@@ -32,6 +32,7 @@
 
     &__button-menu {
         display: none;
+
         @include media-query-tablet-and-down {
             display: block;
         }

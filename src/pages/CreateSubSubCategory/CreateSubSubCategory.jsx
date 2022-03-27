@@ -107,7 +107,7 @@ export const CreateSubSubCategory = () => {
         id="create-sub-sub-category"
         onSubmit={handleSubmit}
       >
-        <h1>
+        <h1 className="create-sub-sub-category__title">
           <span style={{ display: "block" }}>Create </span>sub-sub-category
         </h1>
         <div>

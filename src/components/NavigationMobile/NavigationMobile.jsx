@@ -8,7 +8,7 @@ import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 import { Button } from "../Button/Button";
 
 //!move 'navigationLinks' to NavgationList.jsx
-const navigationLinks = [
+const actionLinks = [
   {
     title: "New user",
     url: "/new-user",
@@ -39,20 +39,20 @@ export const NavigationMobile = ({ isVisible, func }) => {
       <span className="navigation-mobile__icon-close">
         <ButtonIcon
           iconType="close"
-          iconSize="medium"
+          iconSize="large"
           func={func}
           className="navigation-mobile__icon-close"
         />
       </span>
       <nav className="navigation-mobile__wrapper">
-        {navigationLinks.map((navigationLink) => (
+        {actionLinks.map((actionLink) => (
           <NavLink
-            key={navigationLink.title}
-            to={navigationLink.url}
+            key={actionLink.title}
+            to={actionLink.url}
             className="navigation-mobile__list-item"
             onClick={func}
           >
-            {navigationLink.title}
+            {actionLink.title}
           </NavLink>
         ))}
         {navigationCategories.map((item) => (

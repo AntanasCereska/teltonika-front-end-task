@@ -65,9 +65,10 @@ export const CreateCategory = () => {
         id="create-category"
         onSubmit={handleSubmit}
       >
-        <h1>Create Category</h1>
+        <h1 className="create-category__title">Create Category</h1>
         <div>
           <Labelnput
+            isDisabled={false}
             label="Category title"
             placeholder="category title"
             type="text"

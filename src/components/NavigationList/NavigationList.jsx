@@ -8,6 +8,25 @@ import { deleteSubCategory } from "../../redux/categorySlice";
 import { exportDataToJsonFile } from "../../utils/exportDataToJson";
 
 export const NavigationList = ({ data, func }) => {
+  const actionLinks = [
+    {
+      title: "New user",
+      url: "/new-user",
+    },
+    {
+      title: "Create category",
+      url: "/create-category",
+    },
+    {
+      title: "Create sub-category",
+      url: "/create-sub-category",
+    },
+    {
+      title: "Create sub-sub-category",
+      url: "/create-sub-sub-category",
+    },
+  ];
+
   const dispatch = useDispatch();
 
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -30,10 +49,10 @@ export const NavigationList = ({ data, func }) => {
     setToggleDropdown(!toggleDropdown);
   };
 
-  if (!data || data.length === 0) return null;
+  if (!data) return null;
   return (
     <div className="expandable-list">
-      <div className="expandable-list__list-wrapper">
+      <div className="expandable-list__wrapper">
         <span className="expandable-list__item">
           <a
             href={() => false}
@@ -41,7 +60,7 @@ export const NavigationList = ({ data, func }) => {
             className="expandable-list__item-title"
           >
             {data.subcategories.length !== 0 ? (
-              <span>{toggleDropdown ? "►" : "▼"}</span>
+              <span>{toggleDropdown ? "► " : "▼ "}</span>
             ) : (
               "⊘ "
             )}

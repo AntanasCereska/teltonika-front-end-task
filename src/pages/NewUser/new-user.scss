@@ -5,7 +5,7 @@
     @include page-layout;
 
     &__title {
-        text-align: center;
+        text-align: left;
     }
 
     &__form {
@@ -21,7 +21,7 @@
         width: 100%;
         max-width: 720px;
 
-        @media (max-width: 1400px) {
+        @include media-query-tablet-and-down {
             padding: 36px 24px;
         }
     }
